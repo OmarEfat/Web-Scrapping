@@ -38,9 +38,7 @@ async function scrapePrice(url,amount){
 
 
     rawTxt.then(value => {
-        fs.writeFileSync('C:\\Users\\omare\\WebstormProjects\\MyPortfolio\\file.txt',value);
         let val = parseFloat(value)
-        console.log(val)
         let result = val*amount;
         console.log(result)
 
@@ -58,6 +56,11 @@ function APIresult(firstCurrency , secondCurrency , amount)
     scrapePrice('https://www.xe.com/currencyconverter/convert/?Amount=1&From='+firstCurrency+'&To='+secondCurrency,amount);
 
 }
-// How to use the result of my
-APIresult('USD','CAD','5')
+function main()
+{
+    // This function will return a float value for the 5 American dollars to Canadian dollars
+    APIresult('USD', 'CAD', '5')
+}
+
+main()
 
