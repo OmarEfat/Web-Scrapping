@@ -15,6 +15,9 @@
     APIresult('canada')
     APIresult('us')
     APIresult() => this will lead into the total number of cases globally
+    
+    --------------------------------------------------------------------
+    Source of this API is worldmeter
 
  */
 const puppeteer = require('puppeteer');
@@ -50,7 +53,7 @@ function APIresult(country)
 }
 function main()
 {
-    // This function will return a float value for the 5 American dollars to Canadian dollars
+    // This function will return a total number of covid cases at the moment since the beginning of the pandemic in Canada 
     APIresult('canada')
 }
 
